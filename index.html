@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    :root {
+      /* ## Layout */
+      --mobile: 375px;
+      --desktop: 1440px;
+      /* ## Colors
+      ### Primary */
+      --dark-cyan: hsl(158, 36%, 37%);
+      --cream: hsl(30, 38%, 92%);
+      /* ### Neutral */
+      --very-dark-blue: hsl(212, 21%, 14%);
+      --dark-grayish-blue: hsl(228, 12%, 48%);
+      --btn-hover: hsl(158, 58%, 14%);
+      /* ## Typography
+      ### Body Copy (paragraph) */
+      --font-size: 14px;
+      /* ### Font */
+      --font-montserrat: Montserrat;
+      --montserrat-weight1: 500;
+      --montserrat-weight2: 700;
+      --font-fraunces: Fraunces;
+      --fraunces-weight: 700;
+
+      --radiuse: 3%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h2 {
+      line-height: 1em;
+      font-family: Fraunces;
+      font-weight: 700;
+      font-size: 32px;
+      color: var(--very-dark-blue);
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-family: Montserrat;
+      font-size: small;
+      letter-spacing: 0.4em;
+      font-weight: 500;
+      color: var(--dark-grayish-blue);
+    }
+
+    p {
+      color: var(--dark-grayish-blue);
+      font-family: Montserrat;
+      font-size: var();
+      line-height: 1.5em;
+      font-size: 15px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: var(--cream);
+    }
+
+    .container>div {
+      width: 18rem;
+      height: 68%;
+    }
+
+    .container>div:nth-child(1) {
+      border-top-left-radius: var(--radiuse);
+      border-bottom-left-radius: var(--radiuse);
+
+    }
+
+    .container>div:nth-child(2) {
+      background-color: white;
+      border-top-right-radius: var(--radiuse);
+      border-bottom-right-radius: var(--radiuse);
+      padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    }
+
+    .row {
+      width: 50vw;
+      flex-direction: row;
+    }
+
+    .col {
+      flex-direction: column;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+    }
+
+    .new {
+      color: var(--dark-cyan);
+      font-family: var(--font-fraunces);
+      font-size: xx-large;
+      font-weight: var(--fraunces-weight);
+      margin-right: 24px;
+    }
+
+    .old {
+      text-decoration: line-through;
+      font-family: var(--font-montserrat);
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--dark-cyan);
+      color: white;
+      border-radius: var(--radiuse);
+      padding: 20px;
+    }
+
+    .btn>img {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .btn>div {
+      color: inherit;
+      font-size: 18px;
+      margin-right: 6px;
+    }
+
+    .btn:hover {
+      background-color: var(--btn-hover);
+    }
+
+    .p-10 {
+      padding: 10px;
+    }
+
+    .p-30 {
+      padding: 30px;
+    }
+
+    .ps-20 {
+      padding-left: 20px;
+    }
+
+    .pe-20 {
+      padding-right: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- <img src="design/active-states.jpg" alt="" width="500px"> -->
+  <div class="container">
+    <div class="pic-side">
+      <img src="images/image-product-desktop.jpg" alt="" width="100%" height="100%"
+        style="border-bottom-left-radius:var(--radiuse); border-top-left-radius:var(--radiuse);">
+    </div>
+    <div class="ps-20 pe-20">
+      <h5>perfume</h5>
+      <h2> Gabrielle Essence Eau De Parfum</h2>
+      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</p>
+      <div class="price">
+        <div class="new">
+          $149.99
+        </div>
+        <div class="old">
+          $169.99
+        </div>
+      </div>
+      <div class="btn">
+        <img src="images/icon-cart.svg" alt="">
+        <div> Add to Cart</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
